@@ -26,8 +26,7 @@ for i in to_links:
 
         for j in sub_soup.find_all('p'):
             words_to_clean = words_to_clean + j.text + ' '
-            # print(time.time(), '    text written')
-
+            # print(time.time(), 'text written')
     except:
         continue
 print(time.time(), 'grabbed text')
@@ -66,9 +65,9 @@ with open('top_words.csv', 'w') as csvfile:
             rows_written+=1
             if rows_written % 20 == 0:
                 print(time.time(), rows_written, 'rows written')
-            if rows_written > 50:
-                csvfile.close()
-                break
+            # if rows_written > 50:
+            #     csvfile.close()
+            #     break
         except:
             print(time.time(), 'could not write', i)
             continue
