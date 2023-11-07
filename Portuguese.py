@@ -72,9 +72,4 @@ with open('top_words.csv', 'w') as csvfile:
             print(time.time(), 'could not write', i)
             continue
     csvfile.close()
-
-
-
-
-
-#
+    
